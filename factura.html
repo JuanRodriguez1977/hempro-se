@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACTURA</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- link de sitio SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- CSS HEMPRO -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- CSS FACTURA -->
+    <link rel="stylesheet" href="./css/factura.css">
+</head>
+<body>
+    <center>
+        <!-- Topbar Start -->
+    <div class="container-fluid bg-dark">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center text-white">
+                    <small><i class="fa fa-phone-alt mr-2"></i>+57 3228134800</small>
+                    <small class="px-3">|</small>
+                    <small><i class="fa fa-envelope mr-2"></i>juanandresrodriguezperez111@gmail.com</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-white px-2" href="https://www.facebook.com/?locale=es_LA">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://x.com/?lang=es">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://co.linkedin.com/">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://www.instagram.com/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-white pl-2" href="https://www.youtube.com/?app=desktop&hl=es">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+                <a href="index.html" class="navbar-brand ml-lg-3">
+                    <br>
+                    <a href="index.html"><img src="./img/HEMPRO_LOGO.png" alt="" class="img-responsive logo"; width="200" height="100"></a>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                    <div class="navbar-nav m-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">INICIO</a>
+                        <a href="about.html" class="nav-item nav-link">SOBRE NOSOTROS</a>
+                        <a href="service.html" class="nav-item nav-link">NUESTROS SERVICIOS</a>
+                        <a href="price.html" class="nav-item nav-link">PAQUETES DE SERVICIOS</a>
+                        <a href="contact.html" class="nav-item nav-link active">CONTACTANOS</a>
+                        <a href="./index_car.html" class="nav-item nav-link active">TIENDA</a>
+                        <a href="./factura.html" class="nav-item nav-link active">FACTURA</a>
+                        <div class="nav-item dropdown">
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">CONTACTANOS</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    <!-- Navbar End -->
+        <img class="img-titulo" src="./img/Banner Hempro.png" alt="">
+        <form action="" method="post">
+            <table>
+                <caption class="titulo-fact">PEDIDOS</caption>
+                <tr>
+                    <th>NOMBRE DEL CLIENTE</th>
+                    <td><input type="text" size="20"></td>
+                    <th>TIPO DOCUMENTO</th>
+                    <td>
+                        <select name="tipodoc" id="tp">
+                            <option value="CC">CC</option>
+                            <option value="CE">CE</option>
+                            <option value="NIT">NIT</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>No. Documento</th>
+                    <td>
+                        <input type="text" name="ndoc" id="" size="25">
+                    </td>
+                </tr>
+<tr>
+                    <th>DIRECCIÓN</th>
+                    <td><input type="text" name="dir" id="" size="20"></td>
+                    <th>TELEFONO</th>
+                    <td><input type="text" name="tel" id="" size="20"></td>
+                </tr>
+                <tr>
+                    <th>VENDEDOR</th>
+                    <td><input type="text" name="vend" id="" size="20"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+    <table>
+        <tr>
+            <th>REFERENCIA</th>
+            <th colspan="2">DESCRIPCIÓN</th>
+            <th>CANTIDAD</th>
+            <th>VALOR UNITARIO</th>
+            <th>SUBTOTAL</th>
+        </tr>
+        <tr>
+            <td>
+                <select name="" id="prod1" onchange="mostrar()">
+                    <option>Seleccionar:</option>
+                    <option value="250000">Constitucion establecimiento comercial</option>
+                    <option value="800000">Plan Administrativo</option>
+                    <option value="150000">Curso Manipulacion de alimentos</option>
+                </select>
+            </td>
+            <td colspan="2"><input type="text" name="" id="desc01" size="40"></td>
+            <td><input type="number" name="" id="cant01" size="10"></td>
+            <td><input type="number" name="" id="vau01" size="15" disabled></td>
+            <td><input type="text" name="" id="vat01" size="15" disabled></td>
+        </tr>
+        <tr>
+            <td>
+                <select name="" id="prod2" onchange="mostrar()">
+                    <option>Seleccionar:</option>
+                    <option value="250000">Constitucion establecimiento comercial</option>
+                    <option value="800000">Plan Administrativo</option>
+                    <option value="150000">Curso Manipulacion de alimentos</option>
+                </select>
+            </td>
+            <td colspan="2"><input type="text" name="" id="desc02" size="40"></td>
+            <td><input type="number" name="" id="cant02" size="10"></td>
+            <td><input type="number" name="" id="vau02" size="15" disabled></td>
+            <td><input type="text" name="" id="vat02" size="15" disabled></td>
+        </tr>
+        <tr>
+            <td>
+                <select name="" id="prod3" onchange="mostrar()">
+                    <option>Seleccionar:</option>
+                    <option value="250000">Constitucion establecimiento comercial</option>
+                    <option value="800000">Plan Administrativo</option>
+                    <option value="150000">Curso Manipulacion de alimentos</option>
+                </select>
+            </td>
+            <td colspan="2"><input type="text" name="" id="desc03" size="40"></td>
+            <td><input type="number" name="" id="cant03" size="10"></td>
+            <td><input type="number" name="" id="vau03" size="15" disabled></td>
+            <td><input type="text" name="" id="vat03" size="15" disabled></td>
+        </tr>
+        <table>
+        <tr>
+            <th class="adicionales-p" colspan="6">ADICIONALES</th>
+        </tr>
+        <tr class="img-fact">
+            <th colspan="2" rowspan="2"><img src="./img/Dian_logo.jpg" alt=""><input type="checkbox" name="adic" id="checkbox1">Tramites legales</th>
+            <th colspan="2" rowspan="2"><img src="./img/Dian_logo.jpg" alt=""><input type="checkbox" name="adic" id="checkbox2">Implementos para establecmiento</th>
+            <th colspan="2" rowspan="2"><img src="./img/Dian_logo.jpg" alt=""><input type="checkbox" name="adic" id="checkbox3">Capacitaciones</th>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="4">TOTAL DE ADICIONALES</th>
+            <th colspan="2"><input type="text" name="" id="adic0" disabled></th>
+        </tr>
+        <tr>
+            <th colspan="2">FORMA DE PAGO</th>
+            <th colspan="2">
+                <input type="radio" name="fp" id="radio1"> Efectivo <br>
+                <input type="radio" name="fp" id="radio2"> Nequi <br>
+                <input type="radio" name="fp" id="radio3"> tarjetas <br>
+                <input type="radio" name="fp" id="radio4"> addi <br>
+            </th>
+        </tr>
+        <tr>
+            <th>SUBTOTAL</th>
+            <td><input type="text" name="" id="subt" size="25" disabled></td>
+        </tr>
+        <tr>
+            <th colspan="4" rowspan="3">OBSERVACIONES: Revise su pedido al entregarlo y ¡GRACIAS POR SU COMPRA!</th>
+            <th>IVA</th>
+            <td><input type="text" name="" id="iva" size="25" disabled></td>
+        </tr>
+        <tr>
+            <th>DESCUENTO</th>
+            <td><input type="text" name="" id="desc" size="25" disabled></td>
+        </tr>
+        <tr>
+            <th>NETO</th>
+            <td><input type="text" name="" id="neto" size="25" disabled></td>
+        </tr>
+        <tr>
+            <th colspan="2"><input type="button" value="CALCULAR PAGO" onclick="mostrar()"></th>
+            <th colspan="2"><input type="reset" value="BORRAR"></th>
+            <th colspan="2"><input type="button" value="ENVIAR" onclick="enviar()"></th>
+        </tr>
+    </table>
+        <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-7 col-md-6">
+                <div class="row-a">
+                    <div class="col-md-6 mb-5">
+                        <h3 class="text-white mb-4">Encuentranos</h3>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>Bogota D.C-Colombia</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+57 3228134800</p>
+                        <p><i class="fa fa-envelope mr-2"></i>juanandresrodriguezperez111@gmail.com</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light btn-social mr-2" href="https://x.com/?lang=es"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social mr-2" href="https://www.facebook.com/?locale=es_LA"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social mr-2" href="https://co.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h3 class="text-white mb-4">Acceso Rapido</h3>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="./index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                            <a class="text-white mb-2" href="./about.html"><i class="fa fa-angle-right mr-2"></i>Sobre Nosotros</a>
+                            <a class="text-white mb-2" href="./service.html"><i class="fa fa-angle-right mr-2"></i>Nuestros Servicios</a>
+                            <a class="text-white mb-2" href="./price.html"><i class="fa fa-angle-right mr-2"></i>Paquetes de Servicios</a>
+                            <a class="text-white mb-2" href="./index_car.html"><i class="fa fa-angle-right mr-2"></i>Tienda</a>
+                            <a class="text-white" href="./contact.html"><i class="fa fa-angle-right mr-2"></i>Contactanos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6 mb-5">
+                <h3 class="text-white mb-4">Contactanos</h3>
+                <p>En HEMPRO siempre estaremos dispuestos a nuestros clientes, nuestro proposito es lograr un buen impulso a su empresa, catapultarlos al mercado y competencia laboral.¡No dudes en escribirnos, con gusto atenderemos!</p>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Tu E-mail">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-4">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a href="./index.html">HEMPRO Soluciones Empresariales</a>. Todos los derechos Reservados. 
+				
+				<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+				Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                </p>
+            <div class="col-lg-6 text-center text-md-right">
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+</form>
+</center>
+<script src="./JS/main.js"></script>
+<script src="./js/factura.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/carrito.css"><!-- carrito.css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center text-white">
+                    <small><i class="fa fa-phone-alt mr-2"></i>+57 3228134800</small>
+                    <small class="px-3">|</small>
+                    <small><i class="fa fa-envelope mr-2"></i>juanandresrodriguezperez111@gmail.com</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-white px-2" href="https://www.facebook.com/?locale=es_LA">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://x.com/?lang=es">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://co.linkedin.com/">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-white px-2" href="https://www.instagram.com/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-white pl-2" href="https://www.youtube.com/?app=desktop&hl=es">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+                <a href="index.html" class="navbar-brand ml-lg-3">
+                    <br>
+                    <a href="index.html"><img src="./img/HEMPRO_LOGO.png" alt="" class="img-responsive logo"; width="200" height="100"></a>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                    <div class="navbar-nav m-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">INICIO</a>
+                        <a href="about.html" class="nav-item nav-link">SOBRE NOSOTROS</a>
+                        <a href="service.html" class="nav-item nav-link">NUESTROS SERVICIOS</a>
+                        <a href="price.html" class="nav-item nav-link">PAQUETES DE SERVICIOS</a>
+                        <a href="contact.html" class="nav-item nav-link active">CONTACTANOS</a>
+                        <a href="./index_car.html" class="nav-item nav-link active">TIENDA</a>
+                        <a href="./factura.html" class="nav-item nav-link active">FACTURA</a>
+                        <div class="nav-item dropdown">
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">CONTACTANOS</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    <!-- Navbar End -->
+
+    <!-- Carrito de Compras -->
+    <div class="wrapper">
+        <aside>
+            <header>
+                <h1 class="logo">Carrito</h1>
+            </header>
+            <nav>
+                <ul class="menu-carrito">
+                    <li>
+                        <button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> ¡¡¡Arma tu paquete!!!</button>
+                    </li>
+                    <li>
+                        <button id="001" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Tramites legales</button>
+                    </li>
+                    <li>
+                        <button id="002" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Implementos para tu establecimiento</button>
+                    </li>
+                    <li>
+                        <button id="003" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Capacitaciones</button>
+                    </li>
+                    <li>
+                        <a class="boton-menu boton-carrito" href="./carrito.html"><!-- carrito.html -->
+                            <i class="bi bi-cart-fill"></i> Carrito <span id="numerito" class="numerito">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <footer>
+                <p class="texto-footer">©HEMPRO</p>
+            </footer>
+        </aside>
+        <main>
+            <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
+            <div id="contenedor-productos" class="contenedor-productos">
+            </div>
+        </main>
+    </div>
+    <script src="./js/main2.js"></script><!-- main.js -->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-7 col-md-6">
+                <div class="row-a">
+                    <div class="col-md-6 mb-5">
+                        <h3 class="text-white mb-4">Encuentranos</h3>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>Bogota D.C-Colombia</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+57 3228134800</p>
+                        <p><i class="fa fa-envelope mr-2"></i>juanandresrodriguezperez111@gmail.com</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light btn-social mr-2" href="https://x.com/?lang=es"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social mr-2" href="https://www.facebook.com/?locale=es_LA"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social mr-2" href="https://co.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h3 class="text-white mb-4">Acceso Rapido</h3>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="./index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                            <a class="text-white mb-2" href="./about.html"><i class="fa fa-angle-right mr-2"></i>Sobre Nosotros</a>
+                            <a class="text-white mb-2" href="./service.html"><i class="fa fa-angle-right mr-2"></i>Nuestros Servicios</a>
+                            <a class="text-white mb-2" href="./price.html"><i class="fa fa-angle-right mr-2"></i>Paquetes de Servicios</a>
+                            <a class="text-white mb-2" href="./index_car.html"><i class="fa fa-angle-right mr-2"></i>Tienda</a>
+                            <a class="text-white" href="./contact.html"><i class="fa fa-angle-right mr-2"></i>Contactanos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6 mb-5">
+                <h3 class="text-white mb-4">Contactanos</h3>
+                <p>En HEMPRO siempre estaremos dispuestos a nuestros clientes, nuestro proposito es lograr un buen impulso a su empresa, catapultarlos al mercado y competencia laboral.¡No dudes en escribirnos, con gusto atenderemos!</p>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Tu E-mail">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-4">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a href="./index.html">HEMPRO Soluciones Empresariales</a>. Todos los derechos Reservados. 
+				
+				<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+				Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                </p>
+            <div class="col-lg-6 text-center text-md-right">
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+</body>
+</html>
+<!-- FINAL CARRITO DE COMPRAS -->
